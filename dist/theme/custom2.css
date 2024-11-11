@@ -15,7 +15,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 :root {
   --r-background-color: #ffffff;
   --r-main-font: Montserrat, sans-serif;
-  --r-main-font-size: 30px;
+  --r-main-font-size: 25px;
   --r-main-color: #000000;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
@@ -67,7 +67,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 
 .reveal .slides section,
 .reveal .slides section > section {
-  line-height: 1;
+  line-height: 3;
   font-weight: inherit;
 }
 
@@ -116,8 +116,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * OTHER
  *********************************************/
 .reveal p {
-  margin: var(--r-block-margin) 0;
-  line-height: 0.9;
+  margin: 0; /* Remove default margin if any */
+  line-height: 1;
 }
 
 /* Remove trailing margins after titles */
@@ -272,6 +272,13 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .reveal table tbody tr:last-child th,
 .reveal table tbody tr:last-child td {
   border-bottom: none;
+}
+/************Column Layouts**********/
+.twocolumn{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  text-align: left;
 }
 
 .reveal sup {

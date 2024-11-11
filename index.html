@@ -20,13 +20,22 @@
 				<section data-background-image="dist/LIDA_ppt_template.png">
 					<h1 class="r-heading1" text-transform: none>Where do e-cargo bikes go?</h1>
 					<h2 class="r-heading2">An ELEVATE project initiative</h2>
-					<p>Presented by</p>
-					<p>Dr. Jayita Chakraborty</p>
-					<p>Data Scientist, LIDA</p>
+					<p style="position:absolute; top: 250px; left:0;margin-left:800px">
+					Presented by <br>Dr. Jayita Chakraborty<br>Data Scientist, LIDA</p>
 				  </section>
 			
 				<section data-background-image="dist/LIDA_ppt_template_body.png">
-					Slide 2
+					<h2 class="r-heading2" style="position:absolute; top: -250px; left:0;margin-left:-100px">
+						<b>Headings should be in size 24pt</b>
+					</h2>
+						<div class="twocolumn">
+							<div>
+							Column One
+							</div>
+							<div>
+							Column Two        
+							</div>
+						</div>
 				</section>
 				
 				<section data-background-image="dist/LIDA_ppt_template_body.png">
@@ -47,7 +56,20 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+				// The "normal" size of the presentation, aspect ratio will
+				// be preserved when the presentation is scaled to fit different
+				// resolutions. Can be specified using percentage units.
+				width: 1920,
+				height: 1080,
+
+				// Factor of the display size that should remain empty around
+				// the content
+				margin: 0.04,
+
+				// Bounds for smallest/largest possible scale to apply to content
+				minScale: 0.2,
+				maxScale: 2.0,
 			});
 		</script>
 	</body>
