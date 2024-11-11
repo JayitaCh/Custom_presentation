@@ -28,7 +28,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-heading-font-weight: bold;
   --r-heading1-text-shadow: none;
   --r-heading1-size: 60px;
-  --r-heading2-size: 40px;
+  --r-heading2-size: 45px;
   --r-heading3-size: 35px;
   --r-heading4-size: 30px;
   --r-code-font: monospace;
@@ -274,11 +274,23 @@ section.has-light-background, section.has-light-background h1, section.has-light
   border-bottom: none;
 }
 /************Column Layouts**********/
-.twocolumn{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
-  text-align: left;
+.multiCol {
+  display: table;
+  table-layout: absolute; /* don't fudge depending on content*/
+  width: 110%;
+  text-align: justify; /* matter of taste, makes imho sense */
+  .col {
+      display: table-cell;
+      vertical-align: top;
+      width: 50%;
+      padding: 0% 0 0% 2%; /* some vertical, and between columns*/
+      &:first-of-type { padding-left: 0; } /* there's nothing before col1 */
+  }
+  .row {
+      display: table-row;
+      vertical-align: top;
+      width: 50%;
+  }
 }
 
 .reveal sup {
